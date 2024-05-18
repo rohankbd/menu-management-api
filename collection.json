@@ -1,0 +1,379 @@
+{
+    "info": {
+        "_postman_id": "89435fae-7809-4c4e-9f82-2e87f890b57f",
+        "name": "Menu Management APIs",
+        "description": "Collection of APIs for managing menu categories, subcategories, and items",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Get All Categories",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:3000/api/categories",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000",
+                    "path": [
+                        "api",
+                        "categories"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Get Category by ID",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:3000/api/categories/{categoryId}",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000",
+                    "path": [
+                        "api",
+                        "categories",
+                        "{categoryId}"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Create Category",
+            "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"name\": \"Category Name\",\n    \"image\": \"https://example.com/image.jpg\",\n    \"description\": \"Category description\",\n    \"taxApplicability\": true,\n    \"tax\": 10,\n    \"taxType\": \"VAT\"\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:3000/api/categories",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000",
+                    "path": [
+                        "api",
+                        "categories"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Update Category by ID",
+            "request": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"name\": \"Updated Category Name\",\n    \"image\": \"https://example.com/updated_image.jpg\",\n    \"description\": \"Updated category description\",\n    \"taxApplicability\": false\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:3000/api/categories/{categoryId}",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000",
+                    "path": [
+                        "api",
+                        "categories",
+                        "{categoryId}"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "item": [
+                {
+                    "name": "Get All Subcategories",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:3000/api/subcategories",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "3000",
+                            "path": [
+                                "api",
+                                "subcategories"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Get Subcategories by Category ID",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:3000/api/subcategories/category/{categoryId}",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "3000",
+                            "path": [
+                                "api",
+                                "subcategories",
+                                "category",
+                                "{categoryId}"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Get Subcategory by ID",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:3000/api/subcategories/{subcategoryId}",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "3000",
+                            "path": [
+                                "api",
+                                "subcategories",
+                                "{subcategoryId}"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Create Subcategory",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"name\": \"Subcategory Name\",\n    \"image\": \"https://example.com/image.jpg\",\n    \"description\": \"Subcategory description\",\n    \"taxApplicability\": true,\n    \"tax\": 5\n}"
+                        },
+                        "url": {
+                            "raw": "http://localhost:3000/api/subcategories/category/{categoryId}",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "3000",
+                            "path": [
+                                "api",
+                                "subcategories",
+                                "category",
+                                "{categoryId}"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Update Subcategory by ID",
+                    "request": {
+                        "method": "PUT",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"name\": \"Updated Subcategory Name\",\n    \"image\": \"https://example.com/updated_image.jpg\",\n    \"description\": \"Updated subcategory description\",\n    \"taxApplicability\": false\n}"
+                        },
+                        "url": {
+                            "raw": "http://localhost:3000/api/subcategories/{subcategoryId}",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "3000",
+                            "path": [
+                                "api",
+                                "subcategories",
+                                "{subcategoryId}"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Get All Items",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:3000/api/items",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "3000",
+                            "path": [
+                                "api",
+                                "items"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Get Items by Category ID",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:3000/api/items/category/{categoryId}",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "3000",
+                            "path": [
+                                "api",
+                                "items",
+                                "category",
+                                "{categoryId}"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Get Items by Subcategory ID",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:3000/api/items/subcategory/{subcategoryId}",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "3000",
+                            "path": [
+                                "api",
+                                "items",
+                                "subcategory",
+                                "{subcategoryId}"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Get Item by ID",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:3000/api/items/{itemId}",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "3000",
+                            "path": [
+                                "api",
+                                "items",
+                                "{itemId}"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Create Item",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"categoryId\": 1,\n    \"subcategoryId\": 1,\n    \"name\": \"Item Name\",\n    \"image\": \"https://example.com/item_image.jpg\",\n    \"description\": \"Item description\",\n    \"taxApplicability\": true,\n    \"tax\": 5,\n    \"baseAmount\": 100,\n    \"discount\": 10,\n    \"totalAmount\": 90\n}"
+                        },
+                        "url": {
+                            "raw": "http://localhost:3000/api/items",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "3000",
+                            "path": [
+                                "api",
+                                "items"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Update Item by ID",
+                    "request": {
+                        "method": "PUT",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"name\": \"Updated Item Name\",\n    \"image\": \"https://example.com/updated_item_image.jpg\",\n    \"description\": \"Updated item description\",\n    \"taxApplicability\": false,\n    \"baseAmount\": 150,\n    \"discount\": 20,\n    \"totalAmount\": 130\n}"
+                        },
+                        "url": {
+                            "raw": "http://localhost:3000/api/items/{itemId}",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "3000",
+                            "path": [
+                                "api",
+                                "items",
+                                "{itemId}"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Search Item by Name",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:3000/api/items/search?name=ItemName",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "3000",
+                            "path": [
+                                "api",
+                                "items",
+                                "search"
+                            ],
+                            "query": [
+                                {
+                                    "key": "name",
+                                    "value": "ItemName"
+                                }
+                            ]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        }
+    ]
+}
