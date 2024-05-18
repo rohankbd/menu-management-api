@@ -7,7 +7,6 @@ This project is a Node.js backend server for menu management, developed using Ex
 - [Installation](#installation)
 - [Usage](#usage)
 - [API Endpoints](#api-endpoints)
-- [Postman Collection](#postman-collection)
 - [Questions](#questions)
 
 ## Installation
