@@ -7,9 +7,6 @@ This project is a Node.js backend server for menu management, developed using Ex
 - [Installation](#installation)
 - [Usage](#usage)
 - [API Endpoints](#api-endpoints)
-  - [Category Endpoints](#category-endpoints)
-  - [Subcategory Endpoints](#subcategory-endpoints)
-  - [Item Endpoints](#item-endpoints)
 - [Postman Collection](#postman-collection)
 - [Questions](#questions)
 
@@ -51,7 +48,7 @@ You can use Postman to test the API endpoints. Import the provided Postman colle
 
 ## API Endpoints
 
-1. Category Endpoints
+Category Endpoints
     - Get all categories
         - GET /api/categories
     - Get category by ID
